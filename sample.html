@@ -27,14 +27,14 @@
             btn: document.getElementById("elem0_btn"),
             p_elem: document.getElementById("elem0"),
             func: function() {
-                this.p_elem.innerHTML = this.data[getRandomInt(this.data.length)] + "でち。"
+                let text = this.data[getRandomInt(this.data.length)]
+                this.p_elem.innerHTML = text + "でち。"
             }
         }
         
         obj.btn.onclick = function() {
             obj.func()
         }
-        let text = obj.data[getRandomInt(obj.data.length)]
         let submit_btn = document.getElementById("elem1_btn")
         submit_btn.onclick = function() {
             let res = confirm(text + "\nで送信しますか。")
