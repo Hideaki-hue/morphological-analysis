@@ -38,11 +38,13 @@
         let submit_btn = document.getElementById("elem1_btn")
         submit_btn.onclick = function() {
             let res = confirm(text + "\nで送信しますか。")
-            if (text == undefined) {
-                alert("OKボタンを押してください")
-            } else if (res == true) {
-                let line_url = "https://line.me/R/share?text=" + text + "でち。"
-                location.href = line_url;
+            if (res == true) {
+                if (text == undefined) {
+                    alert("OKボタンを押してください")
+                } else {
+                    let line_url = "https://line.me/R/share?text=" + text + "でち。"
+                    location.href = line_url;
+                }
             } else {
                 alert("中止しました")
             }
