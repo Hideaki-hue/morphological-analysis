@@ -37,16 +37,16 @@
         }
         let submit_btn = document.getElementById("elem1_btn")
         submit_btn.onclick = function() {
-            let res = confirm(text + "\nで送信しますか。")
-            if (res == true) {
-                if (typeof text === "undefined") {
-                    alert("OKボタンを押してください")
-                } else {
+            if (typeof text === "undefined") {
+                alert("OKボタンを押してください")
+            } else {
+                let res = confirm(text + "\nで送信しますか。")
+                if (res == true) {
                     let line_url = "https://line.me/R/share?text=" + text + "でち。"
                     location.href = line_url;
+                } else {
+                    alert("中止しました")
                 }
-            } else {
-                alert("中止しました")
             }
         }
     </script>
