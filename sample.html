@@ -39,7 +39,7 @@
         submit_btn.onclick = function() {
             let res = confirm(text + "\nで送信しますか。")
             if (res == true) {
-                if (text == undefined) {
+                if (typeof text === "undefined") {
                     alert("OKボタンを押してください")
                 } else {
                     let line_url = "https://line.me/R/share?text=" + text + "でち。"
